@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "b0d6+CbRot2hKFKeZ6Wflb3jqpMmjKKXuYCFzv5+9e0=",
+  "Source": "CRUDExample",
+  "BasePath": "_content/CRUDExample",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUDExample\\wwwroot",
+      "Source": "CRUDExample",
+      "ContentRoot": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\wwwroot\\",
+      "BasePath": "_content/CRUDExample",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\wwwroot\\StyleSheet.css",
+      "SourceId": "CRUDExample",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\wwwroot\\",
+      "BasePath": "_content/CRUDExample",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}
