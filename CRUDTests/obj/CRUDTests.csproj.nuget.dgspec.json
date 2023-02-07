@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\aspnetcore\\CRUDSolution\\CRUDTests\\CRUDTests.csproj": {}
+    "C:\\asp.netcore\\MvcCountiresC-\\CRUDTests\\CRUDTests.csproj": {}
   },
   "projects": {
-    "C:\\aspnetcore\\CRUDSolution\\CRUDTests\\CRUDTests.csproj": {
+    "C:\\asp.netcore\\MvcCountiresC-\\CRUDTests\\CRUDTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\aspnetcore\\CRUDSolution\\CRUDTests\\CRUDTests.csproj",
+        "projectUniqueName": "C:\\asp.netcore\\MvcCountiresC-\\CRUDTests\\CRUDTests.csproj",
         "projectName": "CRUDTests",
-        "projectPath": "C:\\aspnetcore\\CRUDSolution\\CRUDTests\\CRUDTests.csproj",
-        "packagesPath": "C:\\Users\\dorge\\.nuget\\packages\\",
-        "outputPath": "C:\\aspnetcore\\CRUDSolution\\CRUDTests\\obj\\",
+        "projectPath": "C:\\asp.netcore\\MvcCountiresC-\\CRUDTests\\CRUDTests.csproj",
+        "packagesPath": "C:\\Users\\Dorgeelama\\.nuget\\packages\\",
+        "outputPath": "C:\\asp.netcore\\MvcCountiresC-\\CRUDTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dorgeelama\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,31 +67,16 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

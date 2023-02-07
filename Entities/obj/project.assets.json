@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\CRUDExample.csproj",
-      "projectName": "CRUDExample",
-      "projectPath": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\CRUDExample.csproj",
+      "projectUniqueName": "C:\\asp.netcore\\MvcCountiresC-\\Entities\\Entities.csproj",
+      "projectName": "Entities",
+      "projectPath": "C:\\asp.netcore\\MvcCountiresC-\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Dorgeelama\\.nuget\\packages\\",
-      "outputPath": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\obj\\",
+      "outputPath": "C:\\asp.netcore\\MvcCountiresC-\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dorgeelama\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,9 +56,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

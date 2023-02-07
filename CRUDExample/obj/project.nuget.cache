@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J2R7m0RCd1NKuMhXMyxCLSQ9yLl1CV5z4iZ+NqEC0n8nPpakD+mtIgXZ8WlGJB1F2O3BkOd7HLXlZ+hwcBMu2w==",
+  "dgSpecHash": "MF6sIB86hN03d4YJ0iEYzoZ8qKCr4GxHe7I9Tatls291rhQcGMpkMUtkRHl9vm9rx60psXS+GeLlgD7zbpZpaw==",
   "success": true,
-  "projectFilePath": "C:\\aspnetcore\\CRUDSolution\\CRUDExample\\CRUDExample.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\dorge\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\dorge\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\dorge\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\dorge\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\asp.netcore\\MvcCountiresC-\\CRUDExample\\CRUDExample.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
