@@ -11,6 +11,8 @@ namespace CRUDTests
     {
         private readonly ICountriesService _countriesService;
 
+        //constructor
+        #region AddCountry
         public CountriesServiceTest()
         {
             _countriesService = new CountriesService();
@@ -25,15 +27,16 @@ namespace CRUDTests
 
             //Assert  while executing any of the statments in the lambda expression
             // if it throws any Arguemnt Null Exception this test case will be passed
-            Assert.Throws<ArgumentNullException>(() => {
+            Assert.Throws<ArgumentNullException>(() =>
+            {
                 //Act
                 _countriesService.AddCountry(request);
             });
-                                              
+
         }
 
 
-       
+
 
 
         [Fact]
@@ -41,13 +44,14 @@ namespace CRUDTests
         public void AddCountry_CountryNameIsNull()
         {
             //arrange
-            CountryAddRequest? request = new CountryAddRequest() 
-            { 
-                CountryName  = null 
+            CountryAddRequest? request = new CountryAddRequest()
+            {
+                CountryName = null
             };
             //Assert  while executing any of the statments in the lambda expression
             // if it throws any Argument Exception this test case will be passed
-            Assert.Throws<ArgumentException>(() => {
+            Assert.Throws<ArgumentException>(() =>
+            {
                 //Act
                 _countriesService.AddCountry(request);
             });
@@ -70,7 +74,8 @@ namespace CRUDTests
             };
 
             //Assert
-            Assert.Throws<ArgumentException>(() => {
+            Assert.Throws<ArgumentException>(() =>
+            {
                 //Act
                 _countriesService.AddCountry(request);
                 _countriesService.AddCountry(request2);
@@ -78,7 +83,7 @@ namespace CRUDTests
         }
 
 
-       
+
         [Fact]
         // When you supply proper country nanme, it should insert(add) the country to the existing list of countries
         public void AddCountry_ProperCountryDetails()
@@ -88,15 +93,59 @@ namespace CRUDTests
             {
                 CountryName = "Nepal"
             };
-           
-           
-           //Act
-           CountryResponse response = _countriesService.AddCountry(request);
 
-           //Assert
-           Assert.True(response.CountryID != Guid.Empty);
-          
+
+            //Act
+            CountryResponse response = _countriesService.AddCountry(request);
+            List<CountryResponse> countries_from_GetAllCountries = _countriesService.GetAllCountries();
+
+            //Assert
+            Assert.True(response.CountryID != Guid.Empty);
+            Assert.Contains(response, countries_from_GetAllCountries);
+
 
         }
+        #endregion
+
+        #region GetAllCountries
+        [Fact]
+        // The list of countries should be empty by default (before adding any countries)
+        public void GetAllCountries_EmptyList()
+        {
+            //Act
+            List<CountryResponse> acutal_country_response_list = _countriesService.GetAllCountries();
+
+            Assert.Empty(acutal_country_response_list);
+        }
+
+        [Fact]
+        // The list should contain a few countries
+        public void GetAllCountries_AddFewCountries()
+        {
+            //Arrange
+            List<CountryAddRequest> country_request_list = new List<CountryAddRequest>()
+            {
+                new CountryAddRequest() { CountryName = "USA"},
+                 new CountryAddRequest() { CountryName = "Thailand"},
+                  new CountryAddRequest() { CountryName = "Japah"},
+            };
+            //Act
+            List<CountryResponse> countries_response_list_from_add_country = new List<CountryResponse>();
+            foreach (CountryAddRequest country_request in country_request_list)
+            {
+                countries_response_list_from_add_country.Add(_countriesService.AddCountry(country_request)); 
+            }
+
+           List<CountryResponse> actual_countries_list =  _countriesService.GetAllCountries();
+
+            //read each element from countires_list_from_add_country
+            foreach(CountryResponse country_response in actual_countries_list)
+            {
+                Assert.Contains(country_response, actual_countries_list);
+            }
+        }
+        #endregion
+
     }
 }
+
