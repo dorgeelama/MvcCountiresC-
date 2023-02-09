@@ -146,6 +146,34 @@ namespace CRUDTests
         }
         #endregion
 
+        #region GetCountryByCountryID
+        [Fact]
+        public void GetCountryByCountryID_NullCountryID()
+        {
+            // Arrange
+            Guid? countryID = null;
+            //Act
+            CountryResponse? country_response_from_get_method = _countriesService.GetCountryByCountryID(countryID);
+            //Assert
+            Assert.Null(country_response_from_get_method);    
+        }
+
+        [Fact]
+        public void GetCountryByCountryID_ValidCountryID()
+        {
+            CountryAddRequest test_country = new CountryAddRequest()
+            {
+                CountryName = "Brazil"
+            };
+            CountryResponse test_country_response = _countriesService.AddCountry(test_country);
+            CountryResponse? actual_country_response = _countriesService.GetCountryByCountryID(test_country_response.CountryID);
+
+            Assert.Equal(test_country_response, actual_country_response);
+        }
+
+
+        #endregion
+
     }
 }
 
