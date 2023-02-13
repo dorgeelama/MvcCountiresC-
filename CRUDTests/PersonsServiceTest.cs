@@ -12,12 +12,14 @@ namespace CRUDTests
     public class PersonsServiceTest
     {
         // private fields
-        private readonly IPersonsService _personsSerivce;
+        private readonly IPersonsService _personService;
+        private readonly ICountriesService _countriesService;
 
         //constructor
         public PersonsServiceTest()
         {
-            _personsSerivce = new PersonsService();
+            _personService = new PersonsService();
+            _countriesService = new CountriesService(); 
         }
 
         #region AddPerson
@@ -32,7 +34,7 @@ namespace CRUDTests
             Assert.Throws<ArgumentNullException>(() =>
             {
                 //Act
-                _personsSerivce.AddPerson(personAddRequest);
+                _personService.AddPerson(personAddRequest);
             });
 
         }
@@ -50,7 +52,7 @@ namespace CRUDTests
             Assert.Throws<ArgumentException>(() =>
             {
                 //Act
-                _personsSerivce.AddPerson(personAddRequest);
+                _personService.AddPerson(personAddRequest);
             });
 
         }
@@ -75,8 +77,8 @@ namespace CRUDTests
             };
 
             //Act
-            PersonResponse person_response_from_add = _personsSerivce.AddPerson(personAddRequest);
-            List<PersonResponse> person_list = _personsSerivce.GetAllPersons();
+            PersonResponse person_response_from_add = _personService.AddPerson(personAddRequest);
+            List<PersonResponse> person_list = _personService.GetAllPersons();
 
             //Assert
             Assert.True(person_response_from_add.PersonID != Guid.Empty);
@@ -87,5 +89,49 @@ namespace CRUDTests
 
 
         #endregion
+
+
+        #region GetPersonPersonID
+
+        //If we supply null as PersonID, it should return null as PersonResponse
+        [Fact]
+        public void GetPersonByPersonID_NullID()
+        {
+            //Arrange
+            Guid? personID = null;
+            //Act
+            PersonResponse? person_response_from_get = _personService.GetPersonByPersonID(personID);
+            //Assert
+            Assert.Null(person_response_from_get);
+        }
+
+        //If we supply a valid person id, it should return the valid person details and PersonResponse object
+        [Fact]
+        public void GetPersonByPersonID_WithPersonID()
+        {
+            //Arange
+            CountryAddRequest country_request = new CountryAddRequest() { CountryName = "Canada" };
+            CountryResponse country_response = _countriesService.AddCountry(country_request);
+
+            PersonAddRequest person_request = new PersonAddRequest()
+            { 
+                PersonName = "person name...", 
+                Email = "email@sample.com", 
+                Address = "address", 
+                CountryID = country_response.CountryID, 
+                DateOfBirth = DateTime.Parse("2000-01-01"), 
+                Gender = GenderOptions.Male,
+                ReceiveNewsLetter = false 
+            };
+
+            PersonResponse person_response_from_add = _personService.AddPerson(person_request);
+
+            PersonResponse? person_response_from_get = _personService.GetPersonByPersonID(person_response_from_add.PersonID);
+
+            //Assert
+            Assert.Equal(person_response_from_add, person_response_from_get);
+
+        }
+        #endregion  
     }
 }

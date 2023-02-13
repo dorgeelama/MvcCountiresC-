@@ -35,18 +35,6 @@ namespace Services
                 throw new ArgumentNullException(nameof(personAddRequest));
             }
 
-            // Model Validations
-            // stores reference to model object
-            ValidationContext validationContext = new ValidationContext(personAddRequest); 
-            List<ValidationResult> validationResults = new List<ValidationResult>();
-            // validates entire model object
-            bool isValid = Validator.TryValidateObject(personAddRequest, validationContext, validationResults, true);
-            // if this is false that means there is an error could be one or more
-            if (!isValid)
-            {
-                throw new ArgumentException(validationResults.FirstOrDefault()?.ErrorMessage);
-            }
-
             //Model validation
             ValidationHelper.ModelValidation(personAddRequest);
 
@@ -65,6 +53,23 @@ namespace Services
         public List<PersonResponse> GetAllPersons()
         {
             throw new NotImplementedException();
+        }
+
+        public PersonResponse? GetPersonByPersonID(Guid? personID)
+        {
+            if(personID == null)
+            {
+                return null;
+            }
+
+            Person? person = _persons.FirstOrDefault(temp => temp.PersonID == personID);
+            if(person == null)
+            {
+                return null;
+            }
+
+            return person.ToPersonResponse();
+
         }
     }
 }

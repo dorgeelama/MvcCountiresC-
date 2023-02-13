@@ -13,7 +13,7 @@ namespace Services.Helpers
         {
             // Model Validations
             // stores reference to model object
-            ValidationContext validationContext = new ValidationContext(obj);
+            ValidationContext validationContext = new(obj);
             List<ValidationResult> validationResults = new List<ValidationResult>();
             // validates entire model object
             bool isValid = Validator.TryValidateObject(obj, validationContext, validationResults, true);

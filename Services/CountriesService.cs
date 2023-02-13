@@ -57,12 +57,12 @@ namespace Services
                 return null;
             }
             
-           CountryResponse? matched_country = _countries.FirstOrDefault(country => country.CountryID == countryID).ToCountryResponse();
+           Country? matched_country = _countries.FirstOrDefault(country => country.CountryID == countryID);
             if(matched_country == null)
             {
                 return null;
             }
-            return matched_country;
+            return matched_country.ToCountryResponse();
         }
     }
 }
