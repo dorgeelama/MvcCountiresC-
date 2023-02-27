@@ -20,3 +20,12 @@ C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\refint\CRUDExample.dl
 C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\CRUDExample.pdb
 C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\CRUDExample.genruntimeconfig.cache
 C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\ref\CRUDExample.dll
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\Entities.dll
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\ServiceContracts.dll
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\Services.dll
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\Entities.pdb
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\ServiceContracts.pdb
+C:\asp.netcore\MvcCountiresC-\CRUDExample\bin\Debug\net6.0\Services.pdb
+C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\CRUDExample.RazorAssemblyInfo.cache
+C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\CRUDExample.RazorAssemblyInfo.cs
+C:\asp.netcore\MvcCountiresC-\CRUDExample\obj\Debug\net6.0\CRUDExample.csproj.CopyComplete
