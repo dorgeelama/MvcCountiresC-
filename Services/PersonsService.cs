@@ -79,7 +79,7 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            return _persons.Select(person => person.ToPersonResponse()).ToList();
+            return _persons.Select(temp =>ConvertPersonToPersonResponse(temp)).ToList();
         }
 
         public PersonResponse? GetPersonByPersonID(Guid? personID)
@@ -95,7 +95,7 @@ namespace Services
                 return null;
             }
 
-            return person.ToPersonResponse();
+            return ConvertPersonToPersonResponse(person);
 
         }
 
@@ -220,7 +220,7 @@ namespace Services
             matchingPerson.Address = personUpdateRequest.Address;
             matchingPerson.ReceiveNewsLetters = personUpdateRequest.ReceiveNewsLetters;
 
-            return matchingPerson.ToPersonResponse();
+            return ConvertPersonToPersonResponse(matchingPerson);
 
         }
 
